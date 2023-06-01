@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #demo{
+            background-color: gray;
+            border:1 px solid black;
+            padding:30px;
+        }
+    </style>
+</head>
+<body style="text-align: center;">
+    <button onclick="PositiveNumber();">Positive</button>
+    <button onclick="NegitiveNumber();">Negtive</button>
+    <button onclick="zero();">Zeronumber</button>
+    <h1 id="demo"></h1>
+    <h1 class="demo1"></h1>
+    <h1 class="demo2"></h1>
+    <h1 class="demo3"></h1>
+    <script>
+    var arr=[];
+    for(var i=0;i<5;i++)
+    {
+        arr.push(prompt("enter an integer Array"));   
+    }
+    document.getElementById("demo").innerHTML=arr;
+
+    var positiveArray=[];
+    var negativeArray=[];
+    var zeroNum=[];
+    
+     
+        // arr.forEach(function(item){
+        //     if(item>0)
+        //     {
+        //     positiveArray.push(item);
+        //     }
+        //     else if(item<0)
+        //     {
+        //  negativeArray.push(item);
+                
+        //     }
+        //     else{
+        //        zero.push(item);
+        //     }
+
+        // })
+        for(var i=0; i<=10;i++)
+        {
+            if(arr[i]>0)
+            {
+            positiveArray.push(arr[i]);
+            }
+            else if(arr[i]<0)
+            {
+            negativeArray.push(arr[i]);
+                // 
+            }
+            else{
+                zeroNum.push(arr[i]);
+            }  
+        }
+
+    function PositiveNumber()
+    {    if(!positiveArray.length)
+         document.getElementById('demo').innerHTML="Positive number are Not Exist In the Array";
+         else
+         {
+        document.getElementById('demo').innerHTML=positiveArray;
+       
+        console.log(positiveArray);
+         }
+       
+        
+     
+    }
+    function NegitiveNumber(){
+        if(!negativeArray.length)
+        document.getElementById('demo').innerHTML="Negitive number are Not Exist In the Array";
+        else{
+        document.getElementById('demo').innerHTML=negativeArray;
+        console.log(negativeArray);
+        }
+
+    }
+    function zero()
+    {  
+         if(!zeroNum.length)
+         document.getElementById('demo').innerHTML="Zero are Not Exist In the Array";
+
+       else
+       {
+        document.getElementById('demo').innerHTML=zeroNum;
+        console.log(zeronum); 
+       }
+    }
+
+
+
+
+    </script>
+
+</body>
+</html>

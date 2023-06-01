@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" name="sum" id="sum" placeholder="Enter Array">
+    <button onclick="EnterArray();">Add</button>
+    <button onclick="SumOfArray();">Sum</button>
+    <h1 id="printArray"></h1>
+
+    <script>
+        var myArray=[];
+        function EnterArray()
+        { 
+         var sum=document.getElementById('sum').value;
+         document.getElementById('sum').value=null;
+         console.log(sum);
+         myArray.push(sum);
+         document.getElementById('printArray').innerHTML=myArray;
+       
+        }
+        function SumOfArray()
+        { var sumArr =0;
+        // var sum=document.getElementById('sum').value;
+        //     document.getElementById('printArray').innerHTML=myArray;
+        for(let i=0; i<myArray.length;i++)
+        {
+            sumArr=sumArr + Number(myArray[i]);
+           
+        }
+        document.getElementById("printArray").innerHTML=sumArr;
+            console.log(sumArr);
+          
+          
+       
+
+        }
+   
+
+    </script>
+
+</body>
+</html>

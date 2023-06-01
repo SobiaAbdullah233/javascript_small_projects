@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      #s-num{
+        padding:15px;
+        color:white;
+        background-color: lightgray;
+
+      }  
+      #e-num{
+        padding:15px;
+        color:black;
+        background-color: lightgray;
+
+      }  
+      #t-num{
+        padding:15px;
+        color:black;
+        background-color: lightgray;
+
+      }  
+    </style>
+   
+</head>
+<body style="text-align:center;">
+    <h1>Print a Table of any number</h1>
+    <input type="number" placeholder="Enter Table Number" id="t-num" >
+    <input type="number" placeholder="start Number" id="s-num" >
+    <input type="number" placeholder="Enter End Number" id="e-num">
+    <button onclick="myFunction()">Click me</button>
+    <p id="print-t"></p>
+    
+
+
+    <script>
+   
+   
+      function myFunction()
+      {
+      // var t_num;
+      // var end_num;
+      // var s;
+     var t_num=document.getElementById("t-num").value;
+    var  s=document.getElementById("s-num").value;
+    var  end_num=document.getElementById("e-num").value;
+    let output = ''
+  
+          for( var i=s; i<=end_num; i++)
+          { 
+            output = output +  t_num + " x " +i+ " = "+(t_num*i)+"</br>";
+          }
+
+          document.getElementById("print-t").innerHTML= output;
+
+  
+      }
+      
+  </script>
+  
+
+
+</body>
+</html>

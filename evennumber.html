@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="text-align: center;">
+    <input type="number" name="number" id="even" placeholder="enter even number" 
+    style="margin-top: 20px;background-color: lightgray; border: 1px solid black; padding:10px;color:black;">
+    <button onclick="addEvenNumber();">Even number</button>
+    <h1 id="enenArray"></h1>
+
+    <script>
+      var myArray=[]; 
+function addEvenNumber ()
+{
+    
+    var txt=document.getElementById('even').value;
+            document.getElementById('even').value="";
+    if(txt % 2 == 0){
+        // document.getElementById('table').innerHTML="this is a even number";
+        console.log(txt);
+        myArray.push(txt);
+        document.getElementById('enenArray').innerHTML=myArray;
+    }
+    else{
+        alert("This is a odd number plz Enter even Number");
+    }
+}
+
+    </script>
+</body>
+</html>

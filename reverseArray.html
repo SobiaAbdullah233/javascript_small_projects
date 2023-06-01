@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="text-align:center;">
+    <!-- <input type="number" id="arrayEnter" name="reverse"> -->
+    <button onclick="Dereverse()">OriginalArray</button>
+    <button onclick="revrse()">REVRSE </button>
+    <p id="revrse"></p>
+   
+    <script>
+  var text=[];
+   
+  for(var i=0; i<=5;i++){
+    // text=prompt("Please enter Number","0-9")
+    text.push(prompt("enter  number"));
+  }
+  document.getElementById("revrse").innerHTML=text;
+
+function revrse(){
+    var rev=[];
+    for(var j=text.length-1; j>=0;j--)
+    {
+     rev.push(text[j]);
+    }
+    document.getElementById("revrse").innerHTML=rev;
+    console.log(rev);
+}
+  
+
+   
+
+
+
+    </script>
+
+</body>
+</html>

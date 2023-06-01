@@ -1,0 +1,13 @@
+/* external.css */
+html,body{
+    padding:10px; margin:10px;
+  }
+  .main{
+    width:980px; margin:0 auto;
+  }
+  #buttons>input{
+    font-size:24px; background-color:#4CAF50;
+  }
+  #testOut{
+    height:25px;
+  }

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- script code -->
+<style>
+    .text-center{
+        text-align: center;
+        margin-top:50px;
+    }
+    #pgh{
+        border:1px solid black;
+        padding:10px;
+       
+        text-align: center;
+    }
+</style>
+
+    <script>
+        var myArray=[];
+        function addElement()
+        {
+            var txt=document.getElementById("txt").value;
+            
+            document.getElementById("txt").value="";
+            if(txt=="")
+            {
+                alert("plz enter number");
+            }
+           else if(txt !==-1)
+            {  
+                var index2=myArray.indexOf(txt);
+                if(txt==myArray[index2])
+                {
+                 console.log(txt);
+                 alert("already exist");
+                 
+                }
+                else
+           { 
+            //  alert("No does not exist");
+             myArray.push(txt);
+            document.getElementById("pgh").innerHTML=myArray;
+           }
+
+        
+            }
+            else
+           { 
+             alert("No does not exist");
+             myArray.push(txt);
+            document.getElementById("pgh").innerHTML=myArray;
+           }
+        }
+        function searchElement()
+        {
+            var txt=document.getElementById("txt").value;
+            var index=myArray.indexOf(txt);
+            if(index!==-1)
+            {
+                myArray.splice(index,1)
+                document.getElementById("pgh").innerHTML=myArray;
+
+            }
+            else{
+                alert("Element are not found");
+            }
+           
+        }
+        function replaceElement()
+        {   
+            var txt=document.getElementById("txt").value;
+            if (txt.includes(","))
+            {
+            var arr = txt.split(',');
+            var first_no=arr[0];
+            var second_no=arr[1];
+            var index1=myArray.indexOf(first_no);
+            console.log(index1);
+            // var index1=second_no;
+            if(index1!== -1){
+                myArray[index1]=second_no;  
+            }
+            else{
+                alert("number are not found")
+            }
+            
+            document.getElementById("pgh").innerHTML=myArray;
+
+            }
+            else{
+                alert("plz enter , in Array")
+            }
+        
+           
+        }
+        
+
+    </script>
+</head>
+<body class="text-center">
+    
+    <input type="text" name="text" id="txt">
+    <h1 id="pgh"></h1>
+    <button onclick="addElement();">Add Text</button>
+    <button onclick="searchElement();">Delete</button>
+    <button onclick="replaceElement();">Replace</button>
+    <script>
+        document.getElementById("pgh").innerHTML=myArray;
+    </script>
+
+
+</body>
+</html>
